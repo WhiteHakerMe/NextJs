@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import GlobalBr from '~/components/Global';
 import Banner from '~/components/banner';
 import Brand from '~/components/brand';
 import Header from '~/components/header';
@@ -22,6 +23,7 @@ export default function Home() {
         <Banner/>
         <Brand/>
         <Product/>
+        <GlobalBr/>
       </>
   );
 }

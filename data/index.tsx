@@ -1,10 +1,11 @@
 import { Icons } from '~/assets/icons';
-import { brandDataI, navDataI, productDataI } from '~/types';
+import { GlobalDataI, brandDataI, navDataI, productDataI } from '~/types';
 
 import img_1 from "~/assets/image/chair.png"
 import img_2 from "~/assets/image/chair-2.png"
 import img_3 from "~/assets/image/chair-3.png"
 import img_4 from "~/assets/image/chair-4.png"
+import Global_img from "~/public/brand-img.png"
 
 export const navData: navDataI[] = [
   {
@@ -95,5 +96,13 @@ export const productData: productDataI[] = [
     image: img_4,
     title: "The Lucy Lamp",
     price: 399
+  }
+]
+export const GlobalData: GlobalDataI[] = [
+  {
+    id: 0,
+    title: "It started with a small idea",
+    description: "A global brand with local beginnings, our story begain in a small studio in South London in early 2014",
+    image: Global_img
   }
 ]

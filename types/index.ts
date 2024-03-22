@@ -24,3 +24,7 @@ export interface productDataI extends Pick<TodoDataType, 'id' | "title"> {
   image: StaticImageData,
   price: number
 }
+export interface GlobalDataI extends Pick<TodoDataType, 'id' | "title"> {
+  description: string,
+  image: StaticImageData
+}
