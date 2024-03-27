@@ -1,10 +1,11 @@
+"use client"
 import React, { useState } from 'react'
 import { Icons } from '~/assets/icons'
 // import '~/app/globals.css'
 
 const SignUp = () => {
 
-    const [mail, setEmail] = useState<string>('')
+    const [email, setEmail] = useState<string>('')
     const EmailData = [
         {
             title: "Exclusive offers"
@@ -17,13 +18,17 @@ const SignUp = () => {
         }
     ]
 
-    const token = "6471694592:AAHl_hbFZty4Y8ncnTjRg16cMe4QizCkNNs"
+    const token = "6471694592:AAFj1tF8V_lmvf7nB9h683qkXj1k7TZNec0"
     const chatId = 5836196222
 
     async function onSubmit(e: any) {
         e.preventDefault()
-        console.log(e.target.value);
-        
+        const message = `Email: ${email}`
+        const res = await fetch(`https://api.telegram.org/bot6471694592:AAFj1tF8V_lmvf7nB9h683qkXj1k7TZNec0/sendMessage?text=${message}&chat_id=${chatId}`)
+
+        if (res.status == 200) {
+            alert("Success")
+        }
     }
 
     return (
@@ -36,14 +41,14 @@ const SignUp = () => {
 
                         <div className='flex items-center gap-9 pt-[30px] justify-center'>
                             {EmailData.map((el, i) => (
-                                <div className='flex flex-row-reverse items-center gap-1 text-base font-normal text-white'>{el.title}
+                                <div key={i} className='flex flex-row-reverse items-center gap-1 text-base font-normal text-white'>{el.title}
                                 <span><Icons.checkIcon  /></span></div>
                             ))}
                         </div>
                     </div>
 
                     <form className='mt-10 flex items-center justify-center w-full ' onSubmit={(e) => onSubmit(e)}>
-                        <input type="email" placeholder='your@email.com' className='w-1/4 py-4 px-8' onChange={(e) => setEmail(e.target.value)} />
+                        <input type="email" placeholder='your@email.com' className='w-1/4 py-4 px-8' onChange={(e) => setEmail(e.target.value)} name="email" />
                         <button type='submit' className='py-4 px-8 1/4 bg-blue-950 text-white'>Sign Up</button>
                     </form>
                 </div>
