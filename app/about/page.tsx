@@ -1,8 +1,8 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import { TodoDataType } from '~/types';
 
 async function getData() {
-  const res = await fetch('http://127.0.0.1:8000/api/products/');
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos/10');
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }

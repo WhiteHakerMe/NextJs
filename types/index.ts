@@ -7,6 +7,7 @@ export type TodoDataType = {
   // userId: number;
   id: number;
   name: string;
+  title: string;
   Description: string;
   Price:internal;
   image: ImageData;
