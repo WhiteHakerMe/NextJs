@@ -24,7 +24,7 @@ const SignUp = () => {
     async function onSubmit(e: any) {
         e.preventDefault()
         const message = `Email: ${email}`
-        const res = await fetch(`https://api.telegram.org/bot6471694592:AAFj1tF8V_lmvf7nB9h683qkXj1k7TZNec0/sendMessage?text=${message}&chat_id=${chatId}`)
+        const res = await fetch(`https://api.telegram.org/bot6471694592:AAFj1tF8V_lmvf7nB9h683qkXj1k7TZNec0/sendMessage?text=${message}&chat_id=${chatId}`);
 
         if (res.status == 200) {
             alert("Success")
