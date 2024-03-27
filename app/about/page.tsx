@@ -1,9 +1,8 @@
+import Image from 'next/image';
 import { TodoDataType } from '~/types';
 
 async function getData() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos', {
-    next: { revalidate: 10 },
-  });
+  const res = await fetch('http://127.0.0.1:8000/api/products/');
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
@@ -12,11 +11,16 @@ async function getData() {
 
 const About = async () => {
   const data: TodoDataType[] = await getData();
+  console.log(data);
 
   return (
     <div>
       {data.map((el) => (
-        <p key={el.id}> {el.title}</p>
+        <div key={el.id}>
+          <h2 className='font-bold'> {el.name}</h2>
+          <p >{el.Description}</p>
+          {/* <Image src={el.image} /> */}
+        </div>
       ))}
     </div>
   );

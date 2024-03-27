@@ -109,6 +109,7 @@ export const Icons = {
       width={21}
       height={21}
       fill="none"
+      
       {...props}
     >
       <path

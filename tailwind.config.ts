@@ -20,6 +20,7 @@ const config = {
     extend: {
       backgroundImage: {
         'banner-bg': "url('/banner-img.png')",
+        // 'banner-bg1': "url('/banner-img1.png)"
       },
       colors: {
         border: 'hsl(var(--border))',

@@ -1,11 +1,15 @@
+import { Url } from "next/dist/shared/lib/router/router";
 import { StaticImageData } from "next/image";
 import React, { ReactNode } from "react";
+import internal from "stream";
 
 export type TodoDataType = {
-  userId: number;
+  // userId: number;
   id: number;
-  title: string;
-  completed: boolean;
+  name: string;
+  Description: string;
+  Price:internal;
+  image: ImageData;
 };
 
 export interface navDataI {

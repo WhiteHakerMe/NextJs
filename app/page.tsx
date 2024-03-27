@@ -5,6 +5,7 @@ import Brand from '~/components/brand';
 import Header from '~/components/header';
 import Navbar from '~/components/navbar';
 import Product from '~/components/product';
+import SignUp from '~/components/signup';
 
 export const metadata: Metadata = {
   title: 'Avion',
@@ -24,6 +25,7 @@ export default function Home() {
         <Brand/>
         <Product/>
         <GlobalBr/>
+        <SignUp/>
       </>
   );
 }
