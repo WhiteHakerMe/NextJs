@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 import { Icons } from '~/assets/icons'
 // import '~/app/globals.css'
