@@ -1,3 +1,5 @@
+"use client"
+
 import { Metadata } from 'next';
 import GlobalBr from '~/components/Global';
 import Banner from '~/components/banner';
